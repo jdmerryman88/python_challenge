@@ -34,15 +34,17 @@ with open(pybank_csv) as csv_file:
 
 
     
+    
     print("Financial Analysis")
     print("------------------")
     print("Total Months: " + str(months) )
-    print(average_change)
-    print(average_change / months)
-    print(greatest_month)
-    print(greatest_increase)
-    print(worst_month)
-    print(greatest_decrease)
+    print("Total: $" + str(average_change))
+    print("Average_Change: $" + str(average_change / months))
+    
+    print("Greatest Increase in Profits: " + greatest_month + " ($" + str(greatest_increase) + ")")
+
+    print("Greatest Decrease in Profits: "+ worst_month + " ($" + str(greatest_decrease) + ")")
+    print(" ")
     
 
 
