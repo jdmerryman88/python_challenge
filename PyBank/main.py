@@ -4,9 +4,9 @@ import csv
 pybank_csv = '/Users/justinmerryman/Documents/Rice-BootCamp-Homeworks/python_challenge/PyBank/Resources/budget_data.csv'
 
 months = 0
-greatest_increase = 0
-greatest_decrease = 0
-average_change = 0
+greatest_increase = int(0)
+greatest_decrease = int(0)
+average_change = int(0)
 greatest_month = "Jan-2020"
 worst_month = "Jan-2020"
 
@@ -20,14 +20,30 @@ with open(pybank_csv) as csv_file:
 
     for row in csv_reader:
         months = months + 1
-        change = float(row[1])
+        change = int(row[1])
         average_change = average_change + change
-        if greatest_increase > change:
+
+        if change >= greatest_increase:
             greatest_increase = change
             greatest_month = row[0]
-        
-    print(months)
+
+        elif change <= greatest_decrease:
+            greatest_decrease = change
+            worst_month = row[0]
+
+
+
+    
+    print("Financial Analysis")
+    print("------------------")
+    print("Total Months: " + str(months) )
+    print(average_change)
     print(average_change / months)
+    print(greatest_month)
+    print(greatest_increase)
+    print(worst_month)
+    print(greatest_decrease)
+    
 
 
 
