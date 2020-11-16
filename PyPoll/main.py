@@ -3,14 +3,10 @@ import csv
 
 pypoll_csv = '/Users/justinmerryman/Documents/Rice-BootCamp-Homeworks/python_challenge/PyPoll/Resources/election_data.csv'
 
+total_vote = 0
+candidates = {}
 vote = 0
-candidates = {"name": "Blank", "votes": 0}
-candidate = "John Doe"
-greatest_increase = int(0)
-greatest_decrease = int(0)
-average_change = int(0)
-greatest_month = "Jan-2020"
-worst_month = "Jan-2020"
+
 
 # Open and read csv
 with open(pypoll_csv) as csv_file:
@@ -21,9 +17,13 @@ with open(pypoll_csv) as csv_file:
     print(csv_header)
 
     for row in csv_reader:
-        vote = vote + 1
-        print(row[2])
+        total_vote = total_vote + 1
+        candidates[row[2]] = vote
         
+        
+            
+                
+
         
         
 
@@ -36,7 +36,7 @@ with open(pypoll_csv) as csv_file:
          #   greatest_decrease = change
           #  worst_month = row[0]
 
-total_vote_output = "Total Votes: " + str(vote)
+total_vote_output = "Total Votes: " + str(total_vote)
 output_path = '/Users/justinmerryman/Documents/Rice-BootCamp-Homeworks/python_challenge/PyPoll/analysis/analysis.txt'
 
 # Open the file using "write" mode. Specify the variable to hold the contents
@@ -59,9 +59,9 @@ file.write("------------------------------------- \n")
 
     
     
-print("Financial Analysis")
+print("Election Results")
 print("--------------------------------------")
-print("Total Votes: " + str(vote))
+print("Total Votes: " + str(total_vote))
 print("--------------------------------------")
 #print("Total: $" + str(average_change))
 #print("Average_Change: $" + str(average_change / months))
@@ -72,7 +72,8 @@ print("--------------------------------------")
 #print(" ")
     
 
-print candidates["name"][0]
+print(candidates)
+
 
 
 
