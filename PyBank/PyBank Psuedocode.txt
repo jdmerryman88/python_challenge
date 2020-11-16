@@ -1,0 +1,25 @@
+PyBank Psuedocode
+
+Import csv and import file
+
+Read through file and count number of rows which equals number of months minus 1 for header
+
+Create a variable for total value 
+
+create a variable for average change
+
+create a variable for greatest increase in profits
+
+create a variable for greatest decrease in profits
+
+While loop to read through the file and add up all the months and total 
+
+    for loop to get greatest increase in profits
+
+    for loop to get greatest decrease in profits
+
+calculate average value of profit/losses
+
+print number of months, average change, greatest increase, and greatest decrease
+
+
