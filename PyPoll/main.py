@@ -5,36 +5,28 @@ pypoll_csv = '/Users/justinmerryman/Documents/Rice-BootCamp-Homeworks/python_cha
 
 total_vote = 0
 candidates = {}
-vote = 0
-
-
+vote_count = []
+votes = []
+z = []
+names = []
+totals = []
+percents = []
 # Open and read csv
 with open(pypoll_csv) as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=",")
 
     # Read the header row first (skip this part if there is no header)
     csv_header = next(csv_file)
-    print(csv_header)
+    
 
     for row in csv_reader:
         total_vote = total_vote + 1
-        candidates[row[2]] = vote
-        
-        
-            
-                
+        votes.append(row[2])
 
+from collections import Counter
+
+candidates = dict(Counter(votes))        
         
-        
-
-
-        #if change >= greatest_increase:
-         #   greatest_increase = change
-          #  greatest_month = row[0]
-
-        #elif change <= greatest_decrease:
-         #   greatest_decrease = change
-          #  worst_month = row[0]
 
 total_vote_output = "Total Votes: " + str(total_vote)
 output_path = '/Users/justinmerryman/Documents/Rice-BootCamp-Homeworks/python_challenge/PyPoll/analysis/analysis.txt'
@@ -63,16 +55,47 @@ print("Election Results")
 print("--------------------------------------")
 print("Total Votes: " + str(total_vote))
 print("--------------------------------------")
-#print("Total: $" + str(average_change))
-#print("Average_Change: $" + str(average_change / months))
-    
-#print("Greatest Increase in Profits: " + greatest_month + " ($" + str(greatest_increase) + ")")
 
-#print("Greatest Decrease in Profits: "+ worst_month + " ($" + str(greatest_decrease) + ")")
-#print(" ")
-    
 
-print(candidates)
+percent = float(0.001)
+for x in candidates:
+  names.append(x)
+
+
+for x in candidates.values():
+  cand_votes = float(x)
+  totals.append(cand_votes)
+  percent = 100 * float(cand_votes) / float(total_vote)
+  percent = ("%.3f" % percent)
+  percents.append(percent)
+
+num = len(names) 
+
+high = totals[0]
+loc = 0
+
+for y in range(num):
+  print(names[y]+ ":  " + str(percents[y]) + "  " + "(" + str(totals[y]) + ")" )
+  file.write(names[y]+ ":  " + str(percents[y]) + "  " + "(" + str(totals[y]) + ")" )
+  file.write("\n")
+  if totals[y] > high :
+    high = totals[y]
+    loc = loc + 1
+
+file.write("------------------------------------- \n")
+print("--------------------------------------")
+file.write("The Winner is: " + names[loc])
+file.write("\n")  
+print("The Winner is: " + names[loc])
+file.write("------------------------------------- \n")
+print("--------------------------------------")
+
+
+
+
+
+
+
 
 
 
