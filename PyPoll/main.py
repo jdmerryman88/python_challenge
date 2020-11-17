@@ -75,8 +75,8 @@ high = totals[0]
 loc = 0
 
 for y in range(num):
-  print(names[y]+ ":  " + str(percents[y]) + "  " + "(" + str(totals[y]) + ")" )
-  file.write(names[y]+ ":  " + str(percents[y]) + "  " + "(" + str(totals[y]) + ")" )
+  print(names[y]+ ":  " + str(percents[y]) + "%  " + "(" + str(totals[y]) + ")" )
+  file.write(names[y]+ ":  " + str(percents[y]) +"%    " + "(" + str(totals[y]) + ")" )
   file.write("\n")
   if totals[y] > high :
     high = totals[y]
