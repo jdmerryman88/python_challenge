@@ -38,16 +38,7 @@ file.write("------------------------------------- \n")
 file.write(total_vote_output)
 file.write("\n")
 file.write("------------------------------------- \n")
-#file.write("Total: $" + str(average_change))
-#file.write("\n")
-#file.write("Average_Change: $" + str(average_change / months))
-#file.write("\n")
-#file.write("Greatest Increase in Profits: " + greatest_month + " ($" + str(greatest_increase) + ")")
-#file.write("\n")
-#file.write("Greatest Decrease in Profits: "+ worst_month + " ($" + str(greatest_decrease) + ")")
-#file.write("\n")
-#file.write("")
-#file.close()
+
 
     
     
