@@ -1,7 +1,9 @@
 import os
 import csv
 
-pypoll_csv = '/Users/justinmerryman/Documents/Rice-BootCamp-Homeworks/python_challenge/PyPoll/Resources/election_data.csv'
+
+pypoll_csv = os.path.join('Resources/election_data.csv')
+#pypoll_csv = '/Users/justinmerryman/Documents/Rice-BootCamp-Homeworks/python_challenge/PyPoll/Resources/election_data.csv'
 
 total_vote = 0
 candidates = {}
@@ -29,7 +31,9 @@ candidates = dict(Counter(votes))
         
 
 total_vote_output = "Total Votes: " + str(total_vote)
-output_path = '/Users/justinmerryman/Documents/Rice-BootCamp-Homeworks/python_challenge/PyPoll/analysis/analysis.txt'
+
+output_path = os.path.join('analysis/analysis.txt')
+#output_path = '/Users/justinmerryman/Documents/Rice-BootCamp-Homeworks/python_challenge/PyPoll/analysis/analysis.txt'
 
 # Open the file using "write" mode. Specify the variable to hold the contents
 file = open(output_path, 'w',)
