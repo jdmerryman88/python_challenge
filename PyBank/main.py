@@ -21,7 +21,7 @@ with open(pybank_csv) as csv_file:
 
     # Read the header row first (skip this part if there is no header)
     csv_header = next(csv_file)
-    print(csv_header)
+    
 
     for row in csv_reader:
         months = months + 1
@@ -77,7 +77,7 @@ file.write("")
 file.close()
 
     
-    
+print(" ")    
 print("Financial Analysis")
 print("--------------------------------------")
 print("Total Months: " + str(months) )
@@ -87,6 +87,7 @@ print("Average_Change: $" + str(output_avg))
 print("Greatest Increase in Profits: " + greatest_month + " ($" + str(greatest_increase) + ")")
 
 print("Greatest Decrease in Profits: "+ worst_month + " ($" + str(greatest_decrease) + ")")
+print("--------------------------------------")
 print(" ")
     
 

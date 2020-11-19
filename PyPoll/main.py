@@ -45,7 +45,7 @@ file.write("------------------------------------- \n")
 
 
     
-    
+print("")    
 print("Election Results")
 print("--------------------------------------")
 print("Total Votes: " + str(total_vote))
@@ -84,7 +84,7 @@ file.write("\n")
 print("The Winner is: " + names[loc])
 file.write("------------------------------------- \n")
 print("--------------------------------------")
-
+print("")
 
 
 
