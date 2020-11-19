@@ -1,9 +1,9 @@
 import os
 import csv
 
-#pybank_csv = os.path.join('Resources/budget_data.csv')
+pybank_csv = os.path.join('Resources/budget_data.csv')
 
-pybank_csv = '/Users/justinmerryman/Documents/Rice-BootCamp-Homeworks/python_challenge/PyBank/Resources/budget_data.csv'
+#pybank_csv = '/Users/justinmerryman/Documents/Rice-BootCamp-Homeworks/python_challenge/PyBank/Resources/budget_data.csv'
 #
 
 months = 0
@@ -55,9 +55,9 @@ total_months_output = "Total Months: " + str(months)
 output_avg = total_change / (months - 1) 
 output_avg = ("%.2f" % output_avg)
 
-#output_path = os.path.join('analysis/analysis.txt')
+output_path = os.path.join('analysis/analysis.txt')
 
-output_path = '/Users/justinmerryman/Documents/Rice-BootCamp-Homeworks/python_challenge/PyBank/analysis/analysis.txt'
+#output_path = '/Users/justinmerryman/Documents/Rice-BootCamp-Homeworks/python_challenge/PyBank/analysis/analysis.txt'
 
 # Open the file using "write" mode. Specify the variable to hold the contents
 file = open(output_path, 'w',)
