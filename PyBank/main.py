@@ -48,13 +48,13 @@ for x in range(len(average_change)):
         difference = float(average_change[x]) - initial
         total_change = total_change + difference
         initial = float(average_change[x])
-        print(difference)
+        
 
 
 total_months_output = "Total Months: " + str(months)
 output_avg = total_change / (months - 1) 
 output_avg = ("%.2f" % output_avg)
-print(total_change)
+
 #output_path = os.path.join('analysis/analysis.txt')
 
 output_path = '/Users/justinmerryman/Documents/Rice-BootCamp-Homeworks/python_challenge/PyBank/analysis/analysis.txt'
